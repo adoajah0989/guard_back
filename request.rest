@@ -1,0 +1,71 @@
+###FUNGSI ACCESS TOKEN DATA USERS (TABLE USER) PASTE DISINI
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjAsIm5hbWUiOiJoYW5zIiwiZW1haWwiOiJoYW5zemFraTEyQGdtYWlsLmNvbSIsImlhdCI6MTcwMjUzNDQyMSwiZXhwIjoxNzAyNTM0NDM2fQ.aX65NekwGTLiJAIsd0KJ5vxHhwm3EOjpfpga18dIw_c
+
+###FUNGSI REGISTER DATA USERS (TABLE USER)
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "hans",
+    "email": "hanszaki12@gmail.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###FUNGSI LOGIN DATA USERS (TABLE USER)
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "hanszaki12@gmail.com",
+    "password": "123456"
+}
+
+###FUNGSI REFRESH TOKEN DATA USERS (TABLE USER)
+GET http://localhost:5000/ekspedisi
+
+###FUNGSI LOGOUT DATA USERS (TABLE USER)
+get http://localhost:5000/darurat
+
+
+
+
+##############FUNGSI SELECT * FROM DATA GUEST (TABLE TAMU)
+get http://localhost:5000/bap
+######FUNGSI SELECT DATA GUEST DENGAN ID(TABLE TAMU)
+GET http://localhost:5000/guests
+
+######FUNGSI INSERT DATA GUEST (TABLE TAMU)
+POST  http://localhost:5000/guests
+Content-Type: application/json
+
+{
+    "tanggal": "10 December 2023",
+    "nama": "Candra",
+    "alamat": "Montain Balong",
+    "orang_yang_dituju": "rafly",
+    "keperluan": "bayar spp",
+    "no_kendaraan": "B 4 B 1",
+    "no_ktp": "321313452313",
+    "catatan": "ada duit"
+}
+
+
+###FUNGSI UPDATE DATA GUEST (TABLE TAMU)
+PATCH   http://localhost:5000/guests/4
+Content-Type: application/json
+
+{
+    "tanggal": "1 dec 2023",
+    "nama": "Hans",
+    "alamat": "Pamulang",
+    "orang_yang_dituju": "candra",
+    "keperluan": "joki",
+    "no_kendaraan": "B 1232 GTF",
+    "no_ktp": "320897468290082",
+    "catatan": "JOKI BANG"
+}
+
+###FUNGSI HAPUS DATA GUEST (TABEL TAMU)
+DELETE    http://localhost:5000/guests/4
